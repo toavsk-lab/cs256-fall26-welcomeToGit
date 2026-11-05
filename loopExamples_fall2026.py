@@ -15,7 +15,7 @@ def num_vowels(input_text):
     for character in input_text:
         # check if character should be counted
         # assumes y is not a vowel
-        if character in ['a','e','i','o','u']:
+        if character.lower() in ['a','e','i','o','u']:
             count += 1
     return count
 
@@ -46,13 +46,12 @@ def test_count_vowels():
     ''' This function doesn't take any input or return any values. It tests the count_vowels function with two 
     different strings.'''
     print("\n\nExecuting count vowel function... ")
-    print("And, printing value(s) returned for first execution with 'Hello! My name is Maggie V.' :")
-    print(num_vowels("Hello! My name is Maggie V."))
+    print("And, printing value(s) returned for first execution with 'Hello! My name is Agie O.' :")
+    print(num_vowels("Hello! My name is Agie O."))
     text = "How many vowels?"
     print("And, printing value(s) returned for second execution: ", text)
     print(num_vowels(text))
     print()
-    # what if we wanted to count non_vowels?
 
 def test_nested_loops():
     ''' This function doesn't take any input or return any values. It tests the nested_loops function with two 
