@@ -19,6 +19,16 @@ def num_vowels(input_text):
             count += 1
     return count
 
+def num_nonvowels(name_sentence):
+    '''count and return the number of nonvowels in the text'''
+    count = 0
+    for character in name_sentence:
+        # check if character should be counted
+        # assumes y is not a vowel
+        if character.lower() not in ['a','e','i','o','u']:
+            count += 1
+    return count
+
 def nested_loops(i,j):
     ''' prints a grid of X's with i rows and j columns. Nothing is returned.'''
     for row in range(i):
@@ -53,6 +63,17 @@ def test_count_vowels():
     print(num_vowels(text))
     print()
 
+def test_count_nonvowels():
+    '''This function doesnt take any input or return any values. It tests the count_nonvowels function with 
+    two differenct strings.'''
+    print("\n\nExecuting count nonvowel function... ")
+    print("And, printing value(s) returned for first execution with 'Hello! My name is Aggie O.' :")
+    print(num_nonvowels("Hello! My name is Aggie O."))
+    text = "How many nonvowels?"
+    print("And, printing value(s) returned for second execution: ", text)
+    print(num_nonvowels(text))
+    print()
+
 def test_nested_loops():
     ''' This function doesn't take any input or return any values. It tests the nested_loops function with two 
     different sets of parameters.'''
@@ -72,6 +93,8 @@ def main():
     test_count_vowels()
     # test nested loops
     test_nested_loops()
+    # testing count nonvowels
+    test_count_nonvowels
 
 if __name__ == "__main__":
     # execute the main function
